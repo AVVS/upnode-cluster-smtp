@@ -44,7 +44,7 @@ var self = this;
 var nodeId = this.node.server.id;
 node.acquireResource('email@example.com', 'SMTP', opts).then(function (resourceHolderId) {
     var nodemailerOpts = {}; // whatever nodemailer accepts
-    return self.callResource(resourceHolderId, 'email@example.com', 'SMTP', nodemailerOpts);
+    return self.callResource(resourceHolderId, 'email@example.com', 'SMTP', { email: nodemailerOpts, options: opts });
 }).nodeify(function (err, response) {
     // either that or promises
 });
