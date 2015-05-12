@@ -32,6 +32,7 @@ var node = new Node({
 var opts = {
     provider: 'gmail',
     user: 'support@ark.com',
+    type: 'oauth',
     credentialsResourceName: 'gmail_oauth_appid',
     credentials: {
         refreshToken: '<refresh token>',
